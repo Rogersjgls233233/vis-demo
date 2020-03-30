@@ -103,7 +103,7 @@
 
         var svg = d3.select(
                 "body"
-                ) //解释svg元素，参考wiki svg ; or this tomato  example: https://upload.wikimedia.org/wikipedia/commons/e/e7/Tomate.svg
+            ) //解释svg元素，参考wiki svg ; or this tomato  example: https://upload.wikimedia.org/wikipedia/commons/e/e7/Tomate.svg
             .append("svg")
             .call(d3.zoom() // 注意需要放在这里，以监测svg元素，可以测试放在g元素的效果。
                 .scaleExtent([1, 10])
@@ -128,18 +128,18 @@
 
         queue()
             .defer(d3.json, "world_countries.json") //通过https://jsoneditoronline.org/介绍
-            .defer(d3.tsv, "world_population.tsv")
+            .defer(d3.json, "confirmed.json")
             .await(ready);
 
-        var populationById = {};
 
         function ready(error, data, population) {
+            //console.log(population);
 
-            population.forEach(function (d) {
-                populationById[d.id] = +d.population; //F12，step-wise debug illustration  调试技巧很重要
-            });
             data.features.forEach(function (d) {
-                d.population = populationById[d.id];
+                if (population[d.properties.name]) {
+
+                    d.population = population[d.properties.name].Confirmed;
+                }
             });
 
 
@@ -153,7 +153,7 @@
                 .style("fill", function (d) {
                     if (d.properties.name == "Taiwan") //only for code hack illustration
                         d.id = "CHN";
-                    return color(populationById[d.id]);
+                    return color(population[d.properties.name]);
                 })
                 .style('stroke', 'white')
                 .style('stroke-width', 1.5)
