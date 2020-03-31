@@ -1,5 +1,5 @@
 {
-  "US": {
+  "USA": {
     "Confirmed": 121478,
     "Deaths": 2026,
     "Recovered": 1072,
@@ -11,7 +11,7 @@
     "Recovered": 466,
     "Active": 0
   },
-  "United Kingdom": {
+  "England": {
     "Confirmed": 17312,
     "Deaths": 1021,
     "Recovered": 151,
@@ -107,7 +107,7 @@
     "Recovered": 15,
     "Active": 163
   },
-  "Bahamas": {
+  "The Bahamas": {
     "Confirmed": 10,
     "Deaths": 0,
     "Recovered": 1,
@@ -125,7 +125,7 @@
     "Recovered": 15,
     "Active": 28
   },
-  "Barbados": {
+  "Puerto Rico": {
     "Confirmed": 26,
     "Deaths": 0,
     "Recovered": 0,
@@ -197,7 +197,7 @@
     "Recovered": 21,
     "Active": 175
   },
-  "Burma": {
+  "Myanmar": {
     "Confirmed": 8,
     "Deaths": 0,
     "Recovered": 0,
@@ -245,13 +245,13 @@
     "Recovered": 10,
     "Active": 592
   },
-  "Congo (Brazzaville)": {
+  "Republic of the Congo": {
     "Confirmed": 4,
     "Deaths": 0,
     "Recovered": 0,
     "Active": 4
   },
-  "Congo (Kinshasa)": {
+  "Democratic Republic of the Congo": {
     "Confirmed": 65,
     "Deaths": 6,
     "Recovered": 2,
@@ -263,7 +263,7 @@
     "Recovered": 3,
     "Active": 290
   },
-  "Cote d'Ivoire": {
+  "Ivory Coast": {
     "Confirmed": 101,
     "Deaths": 0,
     "Recovered": 3,
@@ -287,7 +287,7 @@
     "Recovered": 15,
     "Active": 159
   },
-  "Czechia": {
+  "Czech Republic": {
     "Confirmed": 2631,
     "Deaths": 11,
     "Recovered": 11,
@@ -353,7 +353,7 @@
     "Recovered": 20,
     "Active": 624
   },
-  "Eswatini": {
+  "Swaziland": {
     "Confirmed": 9,
     "Deaths": 0,
     "Recovered": 0,
@@ -364,6 +364,12 @@
     "Deaths": 0,
     "Recovered": 1,
     "Active": 15
+  },
+  "Vanuatu": {
+    "Confirmed": 5,
+    "Deaths": 0,
+    "Recovered": 0,
+    "Active": 5
   },
   "Fiji": {
     "Confirmed": 5,
@@ -382,6 +388,12 @@
     "Deaths": 1,
     "Recovered": 0,
     "Active": 6
+  },
+  "New Caledonia": {
+    "Confirmed": 15,
+    "Deaths": 0,
+    "Recovered": 0,
+    "Active": 15
   },
   "Gambia": {
     "Confirmed": 3,
@@ -431,7 +443,7 @@
     "Recovered": 0,
     "Active": 8
   },
-  "Guinea-Bissau": {
+  "Guinea Bissau": {
     "Confirmed": 2,
     "Deaths": 0,
     "Recovered": 0,
@@ -545,7 +557,13 @@
     "Recovered": 1,
     "Active": 36
   },
-  "\"Korea": {
+  "North Korea": {
+    "Confirmed": 127,
+    "Deaths": 9478,
+    "Recovered": 144,
+    "Active": 4811
+  },
+  "South Korea": {
     "Confirmed": 127,
     "Deaths": 9478,
     "Recovered": 144,
@@ -869,7 +887,7 @@
     "Recovered": 18,
     "Active": 112
   },
-  "Serbia": {
+  "Republic of Serbia": {
     "Confirmed": 659,
     "Deaths": 10,
     "Recovered": 0,
@@ -899,6 +917,12 @@
     "Recovered": 10,
     "Active": 665
   },
+  "Somaliland": {
+    "Confirmed": 3,
+    "Deaths": 0,
+    "Recovered": 0,
+    "Active": 3
+  },
   "Somalia": {
     "Confirmed": 3,
     "Deaths": 0,
@@ -922,6 +946,12 @@
     "Deaths": 1,
     "Recovered": 9,
     "Active": 103
+  },
+  "South Sudan": {
+    "Confirmed": 5,
+    "Deaths": 1,
+    "Recovered": 0,
+    "Active": 4
   },
   "Sudan": {
     "Confirmed": 5,
@@ -953,13 +983,13 @@
     "Recovered": 0,
     "Active": 5
   },
-  "Taiwan*": {
+  "Taiwan": {
     "Confirmed": 283,
     "Deaths": 2,
     "Recovered": 30,
     "Active": 251
   },
-  "Tanzania": {
+  "United Republic of Tanzania": {
     "Confirmed": 14,
     "Deaths": 0,
     "Recovered": 1,
@@ -971,7 +1001,7 @@
     "Recovered": 97,
     "Active": 1142
   },
-  "Timor-Leste": {
+  "East Timor": {
     "Confirmed": 1,
     "Deaths": 0,
     "Recovered": 0,
@@ -1060,11 +1090,6 @@
     "Deaths": 1,
     "Recovered": 0,
     "Active": 6
-  },
-  "undefined": {
-    "Confirmed": null,
-    "Deaths": null,
-    "Recovered": null,
-    "Active": null
   }
+
 }

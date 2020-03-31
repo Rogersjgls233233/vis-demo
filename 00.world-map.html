@@ -120,9 +120,9 @@
         var path = d3.geoPath().projection(projection);
 
         var color = d3.scaleThreshold()
-            .domain([10000, 100000, 500000, 1000000, 5000000, 10000000, 50000000, 100000000, 500000000, 1500000000])
-            .range(["rgb(247,251,255)", "rgb(222,235,247)", "rgb(198,219,239)", "rgb(158,202,225)", "rgb(107,174,214)",
-                "rgb(66,146,198)", "rgb(33,113,181)", "rgb(8,81,156)", "rgb(8,48,107)", "rgb(3,19,43)"
+            .domain([10, 50, 100, 500, 1000, 5000, 10000,  50000, 100000])
+            .range(["rgb(255,255,204)", "rgb(255,237,160)", "rgb(254,217,118)", "rgb(254,178,76)", "rgb(253,141,60)",
+                "rgb(252,78,42)", "rgb(227,26,28)", "rgb(189,0,38)", "rgb(128,0,38)"
             ]);
 
 
@@ -138,7 +138,10 @@
             data.features.forEach(function (d) {
                 if (population[d.properties.name]) {
 
-                    d.population = population[d.properties.name].Confirmed;
+                    d.Confirmed = population[d.properties.name].Confirmed;
+                    d.Deaths = population[d.properties.name].Deaths;
+                    d.Recovered = population[d.properties.name].Recovered;
+                    d.Active = population[d.properties.name].Active;
                 }
             });
 
@@ -153,7 +156,7 @@
                 .style("fill", function (d) {
                     if (d.properties.name == "Taiwan") //only for code hack illustration
                         d.id = "CHN";
-                    return color(population[d.properties.name]);
+                    return color(d.Confirmed);
                 })
                 .style('stroke', 'white')
                 .style('stroke-width', 1.5)
@@ -168,7 +171,7 @@
                     d3.select(this)
                         .style("opacity", 1)
                         .style("stroke", "white")
-                        .style("stroke-width", 3); //白色边加粗，以高亮。
+                        .style("stroke-width", 2); //白色边加粗，以高亮。
                 })
                 .on('mouseout', function (d) { //回到上面设置的style
                     tip.hide(d);
@@ -198,12 +201,19 @@
             .offset([-10, 0])
             .html(function (d) {
                 if (d.properties.name == "Taiwan") {
-                    d.properties.name = "China"
-                    d.population = populationById["CHN"];
+                    d.properties.name = "Taiwan,China"
                     //特别注意：地图一定要正确: )
                 }
+                if (d.properties.name == "China") {
+                d.properties.name = "Mainland,China"
+                //特别注意：地图一定要正确: )
+                }
                 return "<strong>Country: </strong><span class='details'>" + d.properties.name + "<br></span>" +
-                    "<strong>Population: </strong><span class='details'>" + format(d.population) + "</span>";
+                    "<strong>Confirmed: </strong><span class='details'>" + format(d.Confirmed) +
+                        "<br></span>"+"<strong>Deaths: </strong><span class='details'>" + format(d.Deaths) +
+                        "<br></span>"+"<strong>Recovered: </strong><span class='details'>" + format(d.Recovered) +
+                            "<br></span>"+"<strong>Active: </strong><span class='details'>" + format(d.Active) +
+                                "</span>";
             });
 
 
