@@ -12,7 +12,7 @@ a demo of vis classwork
 
 #### 项目展示
 
-![](.\20200331124058.jpg)
+![](README.assets/20200331124058.jpg)
 
 ### 数据处理
 
