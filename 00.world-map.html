@@ -154,8 +154,9 @@
                 .append("path") //讲解 g中的path 元素；
                 .attr("d", path) //调用上面的path方法，以实现具体的投影方式
                 .style("fill", function (d) {
-                    if (d.properties.name == "Taiwan") //only for code hack illustration
-                        d.id = "CHN";
+                    if(!d.Confirmed){
+                        return 'rgb(200,200,200)'
+                    }
                     return color(d.Confirmed);
                 })
                 .style('stroke', 'white')
