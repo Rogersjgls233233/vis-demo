@@ -2,6 +2,8 @@
 
 a demo of vis classwork
 
+https://github.com/Rogersjgls233233/vis-demo
+
 ### 项目简介
 
 本项目起源于孙国道老师数据可视化课程提供的 d3 地图人口数据展示 demo，将数据替换为疫情数据，并作色系调整与数据处理
